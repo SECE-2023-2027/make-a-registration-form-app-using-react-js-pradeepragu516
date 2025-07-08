@@ -1,0 +1,196 @@
+* {
+  box-sizing: border-box;
+}
+
+body, html, #root {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: #f5f7fa;
+}
+
+.app-container {
+  width: 100vw;
+  min-height: 100vh;
+  background: #f5f7fa;
+}
+
+.navbar-simple {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  background: #fff;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  z-index: 1000;
+}
+
+.brand {
+  font-weight: bold;
+  font-size: 1.1rem;
+  color: #0077ff;
+}
+
+.nav-links {
+  display: flex;
+  gap: 1rem;
+}
+
+.nav-btn-simple {
+  background: none;
+  border: none;
+  color: #222;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 6px;
+  padding: 0.3rem 1rem;
+  transition: background 0.2s, color 0.2s;
+}
+.nav-btn-simple:hover {
+  background: #e3f0ff;
+  color: #0077ff;
+}
+
+.section {
+  min-height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 80px;
+  box-sizing: border-box;
+}
+
+.hero-section {
+  background-size: cover;
+  background-position: center;
+  gap: 2rem;
+}
+
+.hero-content, .signup-glass, .card-content {
+  background: rgba(255,255,255,0.85);
+  border-radius: 14px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+  padding: 2rem 1.2rem;
+  max-width: 400px;
+  width: 100%;
+}
+
+.hero-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #0077ff;
+  margin-bottom: 1rem;
+}
+
+.hero-desc {
+  color: #333;
+  font-size: 1rem;
+  margin-bottom: 0.7rem;
+}
+
+.signup-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+  width: 100%;
+}
+
+.input {
+  padding: 0.7rem 1rem;
+  border-radius: 8px;
+  border: 1.5px solid #e3f0ff;
+  font-size: 1rem;
+  background: #f5faff;
+  color: #222;
+}
+.input:focus {
+  border-color: #0077ff;
+}
+
+.signup-btn, .card-btn {
+  margin-top: 0.5rem;
+  padding: 0.9rem 0;
+  width: 100%;
+  border: none;
+  border-radius: 8px;
+  background: linear-gradient(90deg, #0077ff 60%, #74ebd5 100%);
+  color: #fff;
+  font-weight: 600;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.2s;
+}
+.signup-btn:hover, .card-btn:hover {
+  background: linear-gradient(90deg, #005fcc 60%, #74ebd5 100%);
+  transform: scale(1.04);
+}
+
+.card-section {
+  background: #fff;
+}
+
+.card-content {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  max-width: 800px;
+}
+
+.card-content.reverse {
+  flex-direction: row-reverse;
+}
+
+.card-img {
+  border-radius: 12px;
+  width: 160px;
+  height: 160px;
+  object-fit: cover;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+}
+
+.card-text h2 {
+  color: #0077ff;
+  font-size: 1.1rem;
+  margin-bottom: 0.7rem;
+}
+
+.card-text p, .card-desc {
+  color: #333;
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.signup-glass h3 {
+  color: #0077ff;
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+.signup-glass p {
+  color: #0077ff;
+  font-size: 0.9rem;
+  font-weight: 700;
+  margin-bottom: 0.3rem;
+}
+
+@media (max-width: 900px) {
+  .hero-section, .card-section {
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 100px 1rem 2rem 1rem;
+  }
+  .card-content, .card-content.reverse {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1.2rem 0.5rem;
+    gap: 1rem;
+  }
+  .card-img {
+    width: 100%;
+    height: 100px;
+  }
+}
